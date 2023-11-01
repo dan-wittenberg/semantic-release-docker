@@ -17,14 +17,6 @@
         "prepareCmd": "echo 'Preparing for release'"
       }
     ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": [
-          "CHANGELOG.md",
-          "*.zip"
-        ]
-      }
-    ]
+    "@semantic-release/git",
   ]
 }
