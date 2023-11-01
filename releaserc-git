@@ -1,0 +1,30 @@
+{
+  "branches": ["main"],
+  "repositoryUrl": "https://auth@bitbucket.org/<BITBUCKET_REPO_OWNER>/<BITBUCKET_REPO_SLUG>.git",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md",
+        "changelogTitle": "# Changelog"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "echo 'Preparing for release'"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "*.zip"
+        ]
+      }
+    ]
+  ]
+}
