@@ -16,7 +16,7 @@ COPY ./ /root
 RUN npm install -g n
 RUN n v21.1.0
 RUN node -v
-RUN npm install --save-dev semantic-release@v22.0.6
+RUN npm install --save-dev semantic-release@v23.0.2
 RUN npm install @semantic-release/git @semantic-release/changelog @semantic-release/exec -D
 
 LABEL maintainer=AHEAD_Inc.
