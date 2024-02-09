@@ -15,9 +15,6 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | b
 
 WORKDIR /root
 COPY ./ /root
-<<<<<<< HEAD
-RUN npm install -g n
-RUN n v21.1.0
 RUN node -v
 RUN npm install -g n; n v21.1.0
 RUN npm install --save-dev semantic-release@v23.0.2
